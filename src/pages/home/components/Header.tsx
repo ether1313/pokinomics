@@ -32,7 +32,7 @@ export default function Header() {
                 e.currentTarget.style.display = 'none';
                 const fallback = document.createElement('div');
                 fallback.className =
-                  'w-40 h-8 bg-[#1e3a8a] rounded flex items-center justify-center text-white font-bold text-sm';
+                  'w-40 h-8 bg-[#1e3a8a] rounded flex items-center justify-center text-white font-bold text-base';
                 fallback.textContent = 'Site Logo';
                 e.currentTarget.parentNode?.appendChild(fallback);
               }}
@@ -190,9 +190,9 @@ export default function Header() {
             className="lg:hidden bg-[#0d1226] border-t border-gray-700 relative z-[9999]"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="px-4 py-4 space-y-3">
+            <div className="px-6 py-4 space-y-6">
               <Link
-                className="block text-white text-sm font-medium"
+                className="block text-white text-base font-medium"
                 to="/"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -200,7 +200,7 @@ export default function Header() {
               </Link>
 
               <Link
-                className="block text-white text-sm font-medium"
+                className="block text-white text-base font-medium"
                 to="/fastpayout-ewallet-gaming-casino"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -208,7 +208,7 @@ export default function Header() {
               </Link>
 
               <Link
-                className="block text-white text-sm font-medium"
+                className="block text-white text-base font-medium"
                 to="/crypto-ewallet-casino-australia"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -218,7 +218,7 @@ export default function Header() {
               {/* Mobile Game Providers Accordion */}
               <button
                 onClick={() => setIsProviderOpen(!isProviderOpen)}
-                className="w-full flex items-center justify-between text-white text-sm font-medium pt-2"
+                className="w-full flex items-center justify-between text-white text-base font-medium"
               >
                 Game Providers
                 <svg
@@ -237,56 +237,56 @@ export default function Header() {
               {isProviderOpen && (
                 <div className="pl-4 pt-2 space-y-2 border-l border-gray-600">
                   <Link
-                    className="block text-white text-sm"
+                    className="block text-white text-base"
                     to="/ewallet-casino-providers"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Provider Guide
                   </Link>
                   <Link
-                    className="block text-white text-sm"
+                    className="block text-white text-base"
                     to="/bng-ewallet-slots"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     BNG Games
                   </Link>
                   <Link
-                    className="block text-white text-sm"
+                    className="block text-white text-base"
                     to="/jili-slot-games"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     JILI Games
                   </Link>
                   <Link
-                    className="block text-white text-sm"
+                    className="block text-white text-base"
                     to="/cq9-ewallet-casino-games"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     CQ9 Gaming
                   </Link>
                   <Link
-                    className="block text-white text-sm"
+                    className="block text-white text-base"
                     to="/pegasus-ewallet-games"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Pegasus Games
                   </Link>
                   <Link
-                    className="block text-white text-sm"
+                    className="block text-white text-base"
                     to="/joker-online-slots"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Joker Games
                   </Link>
                   <Link
-                    className="block text-white text-sm"
+                    className="block text-white text-base"
                     to="/rich-gaming-ewallet-games"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Rich Gaming
                   </Link>
                   <Link
-                    className="block text-white text-sm"
+                    className="block text-white text-base"
                     to="/live-dealer-australia-casino"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -296,7 +296,7 @@ export default function Header() {
               )}
 
               <Link
-                className="block text-white text-sm font-medium pt-2"
+                className="block text-white text-base font-medium"
                 to="/about-us"
                 onClick={() => setIsMenuOpen(false)}
               >

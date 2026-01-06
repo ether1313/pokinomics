@@ -5,6 +5,7 @@ export default function GlobalBottomBanner() {
   const [visible, setVisible] = useState(false);
   const location = useLocation();
 
+  // Reveal banner after scrolling 20%
   useEffect(() => {
     setVisible(false);
 
@@ -21,11 +22,19 @@ export default function GlobalBottomBanner() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [location.pathname]);
+
+  // Broadcast banner visibility state
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent("bannerVisible", { detail: visible }));
+  }, [visible]);
+
+  // Close button should also broadcast false
+  const closeBanner = () => {
+    setVisible(false);
+    window.dispatchEvent(new CustomEvent("bannerVisible", { detail: false }));
+  };
 
   if (!visible) return null;
 
@@ -33,31 +42,26 @@ export default function GlobalBottomBanner() {
     <div className="fixed bottom-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
       <div className="relative w-full max-w-7xl bg-[#0f172a] text-white shadow-2xl rounded-xl pointer-events-auto">
 
+        {/* Close Button */}
         <button
-          onClick={() => setVisible(false)}
+          onClick={closeBanner}
           className="
             absolute -top-3 -right-3
-            w-8 h-8
-            bg-white text-black
-            rounded-full
-            flex items-center justify-center
-            shadow-lg
-            hover:bg-gray-100
-            transition
+            w-8 h-8 bg-white text-black rounded-full
+            flex items-center justify-center shadow-lg
+            hover:bg-gray-100 transition
           "
           aria-label="Close banner"
         >
           ✕
         </button>
 
+        {/* Content */}
         <div className="flex items-center px-4 md:px-6 py-3 md:py-4 gap-4 md:gap-6">
 
+          {/* Rank only on desktop */}
           <div className="hidden md:flex w-12 flex-shrink-0 justify-center">
-            <img
-              src="/first-rank.png"
-              alt="Rank 1"
-              className="w-10 h-10"
-            />
+            <img src="/first-rank.png" alt="Rank 1" className="w-10 h-10" />
           </div>
 
           {/* Logo */}
@@ -69,7 +73,7 @@ export default function GlobalBottomBanner() {
             />
           </div>
 
-          {/* Promotion */}
+          {/* Promo Text */}
           <div className="flex-1 text-center text-sm md:text-base font-medium">
             <span className="text-white/80 md:mr-1">
               <span className="md:hidden">Bonus</span>
@@ -81,14 +85,13 @@ export default function GlobalBottomBanner() {
             <span className="hidden md:inline text-white/80">BONUS</span>
           </div>
 
-          {/* CTA */}
+          {/* CTA Button */}
           <div className="flex-shrink-0">
             <a
               href="https://ipay9aud.com/register/SMSRegister"
               className="
                 bg-yellow-400 text-black font-semibold
-                px-4 md:px-5 py-2
-                rounded-md
+                px-4 md:px-5 py-2 rounded-md
                 hover:bg-yellow-300 transition
                 text-sm md:text-base
               "

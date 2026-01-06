@@ -77,7 +77,7 @@ export default function LiveDealerSource() {
         {liveDealerProviders.map((provider) => (
           <Link
             key={provider.id}
-            to={`/live-dealer/${provider.id}`}
+            to={`/live-dealer-australia-casino/${provider.id}`}
             className="group snap-start flex-shrink-0 md:flex-shrink"
           >
             {/* ===== CARD ===== */}

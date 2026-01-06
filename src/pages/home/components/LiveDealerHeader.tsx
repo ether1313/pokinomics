@@ -32,7 +32,7 @@ export default function LiveDealerHeader() {
         {/* ================= Desktop Navigation ================= */}
         <nav className="hidden lg:flex items-center space-x-8 overflow-visible">
           <NavLink
-            to="/live-dealer"
+            to="/live-dealer-australia-casino"
             end
             className={({ isActive }) =>
               `${baseLink} ${isActive ? activeUnderline : 'hover:text-gray-300'}`
@@ -42,7 +42,7 @@ export default function LiveDealerHeader() {
           </NavLink>
 
           <NavLink
-            to="/live-dealer/evolution"
+            to="/live-dealer-australia-casino/evolution"
             className={({ isActive }) =>
               `${baseLink} ${isActive ? activeUnderline : 'hover:text-gray-300'}`
             }
@@ -51,7 +51,7 @@ export default function LiveDealerHeader() {
           </NavLink>
 
           <NavLink
-            to="/live-dealer/pragmaticplay"
+            to="/live-dealer-australia-casino/pragmaticplay"
             className={({ isActive }) =>
               `${baseLink} ${isActive ? activeUnderline : 'hover:text-gray-300'}`
             }
@@ -60,7 +60,7 @@ export default function LiveDealerHeader() {
           </NavLink>
 
           <NavLink
-            to="/live-dealer/asiagaming"
+            to="/live-dealer-australia-casino/asiagaming"
             className={({ isActive }) =>
               `${baseLink} ${isActive ? activeUnderline : 'hover:text-gray-300'}`
             }
@@ -69,7 +69,7 @@ export default function LiveDealerHeader() {
           </NavLink>
 
           <NavLink
-            to="/live-dealer/playtech"
+            to="/live-dealer-australia-casino/playtech"
             className={({ isActive }) =>
               `${baseLink} ${isActive ? activeUnderline : 'hover:text-gray-300'}`
             }
@@ -106,23 +106,23 @@ export default function LiveDealerHeader() {
       {isMenuOpen && (
         <nav className="lg:hidden bg-[#0d1226] border-t border-gray-700">
           <div className="px-4 py-4 space-y-3">
-            <Link className="block text-white text-sm font-medium" to="/live-dealer">
+            <Link className="block text-white text-sm font-medium" to="/live-dealer-australia-casino">
               Home
             </Link>
 
-            <Link className="block text-white text-sm font-medium" to="/live-dealer/evolution">
+            <Link className="block text-white text-sm font-medium" to="/live-dealer-australia-casino/evolution">
               Evolution
             </Link>
 
-            <Link className="block text-white text-sm font-medium" to="/live-dealer/pragmaticplay">
+            <Link className="block text-white text-sm font-medium" to="/live-dealer-australia-casino/pragmaticplay">
               Pragmatic Play
             </Link>
 
-            <Link className="block text-white text-sm font-medium" to="/live-dealer/asiagaming">
+            <Link className="block text-white text-sm font-medium" to="/live-dealer-australia-casino/asiagaming">
               Asia Gaming
             </Link>
 
-            <Link className="block text-white text-sm font-medium" to="/live-dealer/playtech">
+            <Link className="block text-white text-sm font-medium" to="/live-dealer-australia-casino/playtech">
               Playtech
             </Link>
           </div>

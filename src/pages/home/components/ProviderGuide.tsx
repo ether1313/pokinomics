@@ -135,7 +135,7 @@ export default function ProviderGuide() {
                     )
                   }
                   className={`bg-white border rounded-lg md:rounded-2xl
-                    p-3 md:p-8
+                    p-3 md:p-4
                     flex flex-col items-center transition
                     ${
                       activeProvider === provider.id
@@ -147,7 +147,7 @@ export default function ProviderGuide() {
                   <img
                     src={provider.icon}
                     alt={`${provider.name} game provider`}
-                    className="h-10 md:h-16 w-auto mb-2 md:mb-4"
+                    className="h-14 md:h-16 w-auto mb-2 md:mb-4"
                   />
                   <span className="text-xs md:text-base font-semibold text-gray-900">
                     {provider.name}
