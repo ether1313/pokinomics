@@ -33,7 +33,7 @@ export default function BackToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // 👉 移动底部距离：手机端才移动
+  // 移动底部距离：手机端才移动
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
   const bottomPosition = bannerVisible && isMobile ? 90 : 24; // 110px 为安全高度
 
