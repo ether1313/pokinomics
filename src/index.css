@@ -1,0 +1,336 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Rocket Impulse Animation */
+@keyframes rocket-impulse {
+  0%   { transform: translateY(0) scale(1); }
+  40%  { transform: translateY(-4px) scale(1.06); }
+  60%  { transform: translateY(-2px) scale(1.03); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+.rocket-impulse {
+  animation: rocket-impulse 1.8s ease-in-out infinite;
+}
+
+/* Promotion Banner Splide dots location */
+.splide__pagination {
+  bottom: 6px;
+}
+
+/* Pagination default dot */
+.splide__pagination__page {
+  background: rgba(255, 255, 255, 0.5);
+  width: 4px;
+  height: 4px;
+  margin: 0 3px;
+}
+
+/* Pagination active dot */
+.splide__pagination__page.is-active {
+  background: #ffffff;
+  transform: scale(1.2);
+}
+
+/* Hot badge */
+.hot-badge-inline {
+  display: inline-block;
+  background: #ef4444; /* red-500 */
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.3px;
+
+  animation: hotPulseInline 1.6s infinite;
+}
+
+@keyframes hotPulseInline {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+/* ===== Flip Card Utilities ===== */
+.flip-perspective {
+  perspective: 1000px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease-in-out;
+}
+
+.flip-perspective:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+/* JILI logo preview effect */
+@keyframes logo-in-tl {
+  from {
+    transform: translate(-40px, -40px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes logo-in-tr {
+  from {
+    transform: translate(40px, -40px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes logo-in-bl {
+  from {
+    transform: translate(-40px, 40px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes logo-in-br {
+  from {
+    transform: translate(40px, 40px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.animate-logo-in-tl {
+  animation: logo-in-tl 0.8s ease-out forwards;
+}
+.animate-logo-in-tr {
+  animation: logo-in-tr 0.8s ease-out forwards;
+}
+.animate-logo-in-bl {
+  animation: logo-in-bl 0.8s ease-out forwards;
+}
+.animate-logo-in-br {
+  animation: logo-in-br 0.8s ease-out forwards;
+}
+
+
+@keyframes logo-shine {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateX(150%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.logo-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 249, 0.674),
+    transparent
+  );
+  animation: logo-shine 1.2s ease-out forwards;
+}
+
+/* Welcome Text Effect*/
+@keyframes welcome-bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-char {
+  display: inline-block;
+  font-size: 0.875rem; /* text-sm */
+  letter-spacing: 0.3em;
+  color: white;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: welcome-bounce 0.6s ease-out forwards;
+}
+
+@media (min-width: 768px) {
+  .welcome-char {
+    font-size: 1rem; /* md:text-base */
+  }
+}
+
+/* Desktop view core platform line fade-in effect */
+@keyframes lineIn {
+  from {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.animate-line-in {
+  animation: lineIn 0.8s ease-out forwards;
+}
+
+/* Explore CTA button heartbeat effect */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.08);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.08);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 2.2s ease-in-out infinite;
+}
+
+/* ===== Dark Scrollbar (Game List only) ===== */
+.dark-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dark-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dark-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+
+.dark-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.5);
+}
+
+/* Firefox */
+.dark-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.25) transparent;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Light Scrollbar ===== */
+.light-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.light-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.light-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(203, 203, 203, 0.565);
+  border-radius: 999px;
+}
+
+.light-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(163, 163, 163);
+}
+
+/* Firefox */
+.light-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(203, 203, 203, 0.565) transparent;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out both;
+}
+

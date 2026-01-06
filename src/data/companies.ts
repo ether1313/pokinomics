@@ -1,0 +1,80 @@
+export const companies = [
+  {
+    id: 'ipay9',
+    name: 'iPay9',
+    logo: '/gamelist/companies/ipay9.png',
+    casinoUrl: 'https://ipay9aud.com/register/SMSRegister',
+  },
+  {
+    id: 'kingbet9',
+    name: 'Kingbet9',
+    logo: '/gamelist/companies/kingbet9.png',
+    casinoUrl: 'https://www.kingbet9aus.com/register/SMSRegister',
+  },
+  {
+    id: 'bigpay77',
+    name: 'Bigpay77',
+    logo: '/gamelist/companies/bigpay77.png',
+    casinoUrl: 'https://www.bigpay77.net/register/SMSRegister',
+  },
+  {
+    id: 'me99',
+    name: 'Me99',
+    logo: '/gamelist/companies/me99.png',
+    casinoUrl: 'https://me99aud.com/register/SMSRegister',
+  },
+  {
+    id: 'rolex9',
+    name: 'Rolex9',
+    logo: '/gamelist/companies/rolex9.png',
+    casinoUrl: 'https://rolex9.net/register/SMSRegister',
+  },
+  {
+    id: 'gucci9',
+    name: 'Gucci9',
+    logo: '/gamelist/companies/gucci9.png',
+    casinoUrl: 'https://www.gucci9.me/register/SMSRegister',
+  },
+  {
+    id: 'mrbean9',
+    name: 'Mrbean9',
+    logo: '/gamelist/companies/mrbean9.png',
+    casinoUrl: 'https://www.mrbean9.com/register/SMSRegister',
+  },
+  {
+    id: 'pokemon13',
+    name: 'Pokemon13',
+    logo: '/gamelist/companies/pokemon13.png',
+    casinoUrl: 'https://www.pokemon13.com/register/SMSRegister',
+  },
+  {
+    id: 'spongebob13',
+    name: 'Spongebob13',
+    logo: '/gamelist/companies/spongebob13.png',
+    casinoUrl: 'https://www.spongebob13.net/register/SMSRegister',
+  },
+  {
+    id: 'winnie13',
+    name: 'Winnie13',
+    logo: '/gamelist/companies/winnie13.png',
+    casinoUrl: 'https://www.winnie13.net/register/SMSRegister',
+  },
+  {
+    id: 'queen13',
+    name: 'Queen13',
+    logo: '/gamelist/companies/queen13.png',
+    casinoUrl: 'https://www.queen13.net/register/SMSRegister',
+  },
+  {
+    id: 'micky13',
+    name: 'Micky13',
+    logo: '/gamelist/companies/micky13.png',
+    casinoUrl: 'https://www.micky13.com/register/SMSRegister',
+  },
+  {
+    id: 'bybid9',
+    name: 'Bybid9',
+    logo: '/gamelist/companies/bybid9.png',
+    casinoUrl: 'https://bybid9.com/register/SMSRegister',
+  },
+];

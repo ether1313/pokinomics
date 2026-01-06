@@ -1,0 +1,42 @@
+
+export default function BreadcrumbCrypto() {
+  const items = [
+    { label: 'General Guide', id: 'crypto-general' },
+    { label: 'Recommended Crypto Casinos', id: 'recommended-crypto-casino' },
+    { label: 'Crypto Casinos List', id: 'top-list-crypto' },
+    { label: 'Comparison Review', id: 'comparison-table' },
+    { label: 'How Crypto Casinos Work', id: 'how-cryptoCasino-work' },
+    { label: 'FAQs', id: 'crypto-faqs' },
+  ];
+
+  const handleClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  return (
+    <div className="bg-gray-100 border-b border-gray-300">
+      <div className="max-w-7xl mx-auto">
+        <div className="overflow-x-auto scrollbar-hide">
+          <div className="flex items-center space-x-1 px-4 py-3 min-w-max">
+            {items.map((item, index) => (
+              <div key={index} className="flex items-center">
+                <button
+                  onClick={() => handleClick(item.id)}
+                  className="text-xs md:text-sm text-gray-700 hover:text-[#002147] whitespace-nowrap transition-colors cursor-pointer"
+                >
+                  {item.label}
+                </button>
+                {index < items.length - 1 && (
+                  <span className="text-gray-500 text-sm mx-2">&gt;</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
