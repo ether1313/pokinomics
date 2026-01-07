@@ -180,9 +180,14 @@ export default function PragmaticPlaySource() {
 
         {/* ================= Section 2: Who is Pragmatic Play ================= */}
         <section className="max-w-5xl mx-auto text-center space-y-4 md:space-y-6">
-            <h1 className="text-2xl md:text-4xl font-bold">
-              Who are Pragmatic Play. We are.
+            <h1 className="text-2xl md:text-4xl font-bold leading-tight text-center">
+              Who are Pragmatic Play.
+              <span className="hidden md:inline">&nbsp;</span>
+              <br className="block md:hidden" />
+              We are.
             </h1>
+
+
 
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">
               Headquartered in Gibraltar, Pragmatic Play is a leading content provider

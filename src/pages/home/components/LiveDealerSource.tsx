@@ -92,7 +92,7 @@ export default function LiveDealerSource() {
               "
             >
               {/* ===== TOP IMAGE ===== */}
-              <div className="relative h-[300px] md:h-[340px] overflow-hidden">
+              <div className="relative h-[200px] md:h-[340px] overflow-hidden">
                 <img
                   src={provider.bg}
                   className="
