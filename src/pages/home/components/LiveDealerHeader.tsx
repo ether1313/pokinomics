@@ -22,7 +22,7 @@ export default function LiveDealerHeader() {
               e.currentTarget.style.display = 'none';
               const fallback = document.createElement('div');
               fallback.className =
-                'w-40 h-8 bg-[#1e3a8a] rounded flex items-center justify-center text-white font-bold text-sm';
+                'w-40 h-8 bg-[#1e3a8a] rounded flex items-center justify-center text-white font-bold text-base';
               fallback.textContent = 'Site Logo';
               e.currentTarget.parentNode?.appendChild(fallback);
             }}
@@ -106,24 +106,24 @@ export default function LiveDealerHeader() {
       {isMenuOpen && (
         <nav className="lg:hidden bg-[#0d1226] border-t border-gray-700">
           <div className="px-4 py-4 space-y-3">
-            <Link className="block text-white text-sm font-medium" to="/live-dealer-australia-casino">
+            <Link className="block text-white text-lg font-medium" to="/live-dealer-australia-casino">
               Home
             </Link>
 
-            <Link className="block text-white text-sm font-medium" to="/live-dealer-australia-casino/evolution">
-              Evolution
+            <Link className="block text-white text-lg font-medium" to="/live-dealer-australia-casino/evolution">
+              ♠ Evolution
             </Link>
 
-            <Link className="block text-white text-sm font-medium" to="/live-dealer-australia-casino/pragmaticplay">
-              Pragmatic Play
+            <Link className="block text-white text-lg font-medium" to="/live-dealer-australia-casino/pragmaticplay">
+              ♠ Pragmatic Play
             </Link>
 
-            <Link className="block text-white text-sm font-medium" to="/live-dealer-australia-casino/asiagaming">
-              Asia Gaming
+            <Link className="block text-white text-lg font-medium" to="/live-dealer-australia-casino/asiagaming">
+              ♠ Asia Gaming
             </Link>
 
-            <Link className="block text-white text-sm font-medium" to="/live-dealer-australia-casino/playtech">
-              Playtech
+            <Link className="block text-white text-lg font-medium" to="/live-dealer-australia-casino/playtech">
+              ♠ Playtech
             </Link>
           </div>
         </nav>
