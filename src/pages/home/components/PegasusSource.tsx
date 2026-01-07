@@ -220,14 +220,14 @@ export default function PegasusSource() {
     <div className="w-full text-white">
 
       {/* ================= HERO VIDEO ================= */}
-      <section className="relative w-full h-[28vh] md:h-[100vh] overflow-hidden mt-16 md:mt-14">
+      <section className="relative w-full h-[26vh] md:h-[100vh] overflow-hidden mt-16 md:mt-14">
         <video
           src="/other/pegasus/collection.mp4"
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-contain md:object-cover"
+          className="absolute inset-0 w-full h-full object-cover md:object-cover"
         />
       </section>
 
