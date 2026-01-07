@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import {MonitorPlay, Zap, ShieldCheck, Layers, Crown, ChevronLeft, ChevronRight} from 'lucide-react';
 
 const techSlides = [
@@ -31,15 +31,53 @@ const techSlides = [
 
 export function TechnologySlider() {
   const [index, setIndex] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+
+  const minSwipeDistance = 50; // 滑动多少像素才算有效切换
+
+  // ===== 手指按下 =====
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchEndX.current = null;
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  // ===== 手指移动 =====
+  const onTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  // ===== 手指松开，判断滑动方向 =====
+  const onTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const distance = touchStartX.current - touchEndX.current;
+
+    if (Math.abs(distance) < minSwipeDistance) return; 
+
+    if (distance > 0) {
+      // 向左滑 → 下一张
+      setIndex((prev) => (prev + 1) % techSlides.length);
+    } else {
+      // 向右滑 → 上一张
+      setIndex((prev) =>
+        prev === 0 ? techSlides.length - 1 : prev - 1
+      );
+    }
+  };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center overflow-visible">
+    <div
+      className="relative w-full h-full flex items-center justify-center overflow-visible"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       {/* ===== CARDS STAGE ===== */}
       <div className="relative w-full h-full flex items-center justify-center">
         {techSlides.map((slide, i) => {
           const offset = i - index;
 
-          // 只保留前后 1 张（桌面 & 手机一致）
           if (Math.abs(offset) > 1) return null;
 
           const Icon = slide.icon;
@@ -51,13 +89,17 @@ export function TechnologySlider() {
               style={{
                 transform: `
                   translateX(${
-                    // 手机位移更小，桌面更大
-                    offset * (typeof window !== 'undefined' && window.innerWidth < 768 ? 140 : 260)
+                    offset *
+                    (typeof window !== "undefined" &&
+                    window.innerWidth < 768
+                      ? 140
+                      : 260)
                   }px)
                   scale(${
                     offset === 0
                       ? 1
-                      : typeof window !== 'undefined' && window.innerWidth < 768
+                      : typeof window !== "undefined" &&
+                        window.innerWidth < 768
                       ? 0.88
                       : 0.9
                   })
@@ -65,7 +107,8 @@ export function TechnologySlider() {
                 opacity:
                   offset === 0
                     ? 1
-                    : typeof window !== 'undefined' && window.innerWidth < 768
+                    : typeof window !== "undefined" &&
+                      window.innerWidth < 768
                     ? 0.25
                     : 0.45,
                 zIndex: offset === 0 ? 20 : 10,
@@ -86,7 +129,6 @@ export function TechnologySlider() {
                 "
               >
                 <Icon className="h-10 md:h-12 w-10 md:w-12 mb-5 md:mb-6 text-orange-400" />
-
                 <p className="text-xs md:text-base text-gray-100 leading-relaxed">
                   {slide.text}
                 </p>
@@ -97,7 +139,7 @@ export function TechnologySlider() {
       </div>
 
       {/* ===== ARROWS ===== */}
-      <div className="absolute bottom-4 md:bottom-6 flex items-center gap-10">
+      <div className="absolute bottom-4 md:bottom-6 flex items-center gap-40">
         <button
           onClick={() =>
             setIndex((prev) =>
@@ -125,14 +167,14 @@ export function TechnologySlider() {
 
 export default function PragmaticPlaySource() {
   return (
-    <section className="space-y-10 px-4 md:px-0">
+    <section className="px-2 md:px-0">
 
         {/* ================= Section 1: Logo Hero ================= */}
-        <section className="pt-12 flex justify-center">
+        <section className="pt-6 flex justify-center">
             <img
             src="/pragmaticPlay/pragmaticplay-logo.png"
             alt="Pragmatic Play"
-            className="h-24 md:h-36 object-contain"
+            className="h-28 md:h-36 object-contain mb-6 md:mb-10"
             />
         </section>
 
@@ -161,7 +203,7 @@ export default function PragmaticPlaySource() {
         {/* ================= Section 3: Live Casino Showcase ================= */}
         <section className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between">
-            <h2 className="text-2xl md:text-4xl font-bold mt-0 md:mt-6">
+            <h2 className="text-2xl md:text-4xl font-bold mt-16 md:mt-20">
                 Curated: Live Dealer Studio
             </h2>
         </div>
@@ -172,7 +214,7 @@ export default function PragmaticPlaySource() {
             and Blackjack.
         </p>
 
-        <div className="grid gap-8 md:grid-cols-3 mt-4 md:mt-6">
+        <div className="grid gap-8 md:grid-cols-3 mt-4 md:mt-6 mb-16 md:mb-20">
             {[
             {
                 title: 'Blackjack X',
@@ -224,17 +266,17 @@ export default function PragmaticPlaySource() {
         </section>
 
         {/* ================= Section 4: Video ================= */}
-        <section className="max-w-7xl mx-auto">
-            <div className="aspect-video w-full rounded-2xl overflow-hidden mt-10 md:mt-16">
-            <iframe
-                className="w-full h-full"
-                src="/pragmaticPlay/Money-Time_Promo-Video_Desktop_EN-1080.mp4"
-                title="Pragmatic Play Live Casino"
-                frameBorder="0"
-                allowFullScreen
+        <section className="w-screen relative left-1/2 right-1/2 -mx-[50vw]">
+          <div className="aspect-video w-full">
+            <video
+              className="w-full h-full object-cover"
+              src="/pragmaticPlay/Money-Time_Promo-Video_Desktop_EN-1080.mp4"
+              controls
+              autoPlay={false}
             />
-            </div>
+          </div>
         </section>
+
 
         {/* ================= Section 5: Technology & Platform ================= */}
         <section
@@ -289,7 +331,7 @@ export default function PragmaticPlaySource() {
 
         {/* ================= Section 6: Responsible Gaming ================= */}
         <section className="relative py-6 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 md:px-0 grid gap-10 md:gap-12 md:grid-cols-2 items-center mb-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-0 grid gap-10 md:gap-12 md:grid-cols-2 items-center mt-16 mb-20">
 
             {/* ===== LEFT: LOGO GRID ===== */}
             <div className="grid grid-cols-2 gap-4 md:gap-6">

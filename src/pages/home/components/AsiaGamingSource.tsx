@@ -61,18 +61,17 @@ export default function AsiaGamingSource() {
         </div>
       </div>
 
-      {/* ===== VIDEO SECTION ===== */}
-      <section className="max-w-7xl mx-auto">
-            <div className="aspect-video w-full rounded-2xl overflow-hidden mt-4 md:mt-16">
-            <iframe
-                className="w-full h-full"
-                src="/asiaGaming/asiaGamingVideo.mp4"
-                title="Asia Gaming Live Casino"
-                frameBorder="0"
-                allowFullScreen
-            />
-            </div>
-        </section>
+      {/* ===== VIDEO SECTION (FULL WIDTH) ===== */}
+      <section className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mt-4 md:mt-16">
+        <div className="aspect-video w-full overflow-hidden">
+          <video
+            className="w-full h-full object-cover"
+            src="/asiaGaming/asiaGamingVideo.mp4"
+            controls
+          />
+        </div>
+      </section>
+
 
       {/* ===== FEATURES ===== */}
       <div className="bg-[#f0f2f4] text-gray-900 rounded-xl p-8 md:p-12">
