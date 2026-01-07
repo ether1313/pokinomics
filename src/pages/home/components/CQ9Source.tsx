@@ -243,11 +243,11 @@ export default function CQ9Source() {
             "
         >
             {/* Logo */}
-            <div className="flex justify-center mb-6 md:mb-8 mt-28">
+            <div className="flex justify-center mb-6 md:mb-8 mt-12 md:mt-16">
             <img
                 src="/other/cq9/cq9-logo.png"
                 alt="CQ9 Game Provider"
-                className="h-20 md:h-32 object-contain"
+                className="h-24 md:h-32 object-contain"
             />
             </div>
 

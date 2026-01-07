@@ -147,7 +147,7 @@ export default function EvolutionSource() {
 
         {/* Title & Intro */}
         <div className="text-center space-y-6">
-          <h2 className="text-xl md:text-4xl font-semibold tracking-wide">
+          <h2 className="text-2xl md:text-4xl font-bold tracking-wide">
             Mission · Vision · Values
           </h2>
 
@@ -251,7 +251,7 @@ export default function EvolutionSource() {
       {/* ================= Live Dealer Games ================= */}
       <section className="space-y-0 md:space-y-16">
 
-        <h2 className="text-xl md:text-4xl font-bold text-center">
+        <h2 className="text-2xl md:text-4xl font-bold text-center">
            Live Dealer Offering by Evolution
         </h2>
 
@@ -335,7 +335,7 @@ export default function EvolutionSource() {
       <section className="bg-white rounded-3xl px-6 py-10 md:px-12 md:py-16 border border-gray-100">
 
         <div className="max-w-7xl mb-10">
-          <h2 className="text-xl md:text-4xl font-semibold mb-4">
+          <h2 className="text-xl md:text-4xl font-bold mb-4">
             Licences, Certification & Accreditations
           </h2>
           <p className="text-sm md:text-base text-gray-700 leading-relaxed">
@@ -382,7 +382,7 @@ export default function EvolutionSource() {
       <section className="space-y-8 md:space-y-12">
 
       <div className="text-center space-y-4">
-        <h2 className="text-xl md:text-4xl font-bold">
+        <h2 className="text-2xl md:text-4xl font-bold">
            Built for Seamless Multi-Platform Deployment
         </h2>
 

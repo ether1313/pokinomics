@@ -1,6 +1,6 @@
 export default function AsiaGamingSource() {
   return (
-    <section className="space-y-12 md:space-y-16">
+    <section className="space-y-12 md:space-y-16 mb-20">
 
       {/* ===== LOGO & ABOUT ===== */}
       <div className="text-center space-y-8 mt-14 md:mt-20">
@@ -10,7 +10,7 @@ export default function AsiaGamingSource() {
           className="mx-auto h-16 md:h-24 object-contain mb-10 md:mb-16"
         />
 
-        <h1 className="text-xl md:text-4xl font-semibold">
+        <h1 className="text-2xl md:text-4xl font-bold">
             About Asia Gaming Software
         </h1>
 
@@ -100,7 +100,7 @@ export default function AsiaGamingSource() {
         {/* ===== LIVE DEALER GAMES ===== */}
         <div className="bg-[#f0f2f4] rounded-xl p-8 md:p-12 space-y-8 md:space-y-14">
 
-            <h2 className="text-xl md:text-4xl font-bold text-gray-900 text-center">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center">
                 Live Dealer eWallet Casino Games
             </h2>
 
@@ -230,7 +230,7 @@ export default function AsiaGamingSource() {
             {/* Title */}
             <h2
             className="
-                text-xl md:text-4xl
+                text-2xl md:text-4xl
                 font-bold
               text-white
                 tracking-tight

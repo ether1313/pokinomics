@@ -19,7 +19,7 @@ export default function AboutUs() {
         <div className="absolute inset-0 bg-slate-900/80" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_55%)]" />
 
-        <div className="relative max-w-7xl mx-auto px-4 md:px-0 mt-10 md:mt-18 py-20 md:py-28">
+        <div className="relative max-w-7xl mx-auto px-4 md:px-0 mt-10 md:mt-18 py-10 md:py-20">
           <div className="grid gap-14 md:grid-cols-2 items-center">
 
             {/* LEFT CONTENT */}
@@ -189,10 +189,10 @@ export default function AboutUs() {
 
                 <div className="rounded-xl bg-black/30 border border-white/10 p-4 font-mono text-xs md:text-sm text-white/80">
                   <pre className="whitespace-pre-wrap leading-relaxed">
-{`total_wagered = sum(all_bets_over_time)
-total_returned = sum(all_winnings_over_time)
+                    {`total_wagered = sum(all_bets_over_time)
+                    total_returned = sum(all_winnings_over_time)
 
-RTP = (total_returned / total_wagered) * 100`}
+                    RTP = (total_returned / total_wagered) * 100`}
                   </pre>
                 </div>
 

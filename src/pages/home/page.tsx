@@ -14,11 +14,13 @@ import HowToPlaySection from './components/HowToPlaySection';
 import ProsConsSection from './components/ProsConsSection';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
+import ScrollProgressBar from '../../components/feature/ScrollProgressBar';
 import BackToTop from "../../components/feature/BackToTop";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
+      <ScrollProgressBar />
       <Header />
       <Breadcrumb />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8 mt-2 md:mt-4">

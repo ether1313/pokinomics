@@ -266,7 +266,7 @@ export default function JokerSource() {
       <section className="w-full">
         <img
           src="/other/joker/hero-bg.png"
-          className="w-full h-[28vh] md:h-[70vh] object-cover mt-[75px] md:mt-16"
+          className="w-full h-[28vh] md:h-[70vh] object-cover"
         />
       </section>
 

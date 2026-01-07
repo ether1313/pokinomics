@@ -42,7 +42,7 @@ export default function ProviderGuide() {
 
 
   return (
-    <section className="w-screen relative left-1/2 right-1/2 -mx-[50vw] mt-[75px] md:mt-16">
+    <section className="w-screen relative left-1/2 right-1/2 -mx-[50vw]">
       {/* ================= HERO（全宽） ================= */}
       <header
         className="

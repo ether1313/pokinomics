@@ -243,13 +243,13 @@ export default function RichGamingSource() {
     <section className="bg-white text-black">
 
       {/* HERO / BRAND INTRO */}
-      <div className="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-12 items-center">
         {/* LEFT */}
         <div>
           <img
             src="/other/richGaming/rich-gaming-logo.png"
             alt="Rich Gaming"
-            className="h-32 md:h-40 mb-6 mt-12"
+            className="h-32 md:h-40 mb-6"
           />
 
           <h1 className="text-2xl md:text-5xl font-extrabold leading-tight mb-6">
@@ -275,7 +275,7 @@ export default function RichGamingSource() {
           <img
             src="/other/richGaming/rich_gaming_about-img.png"
             alt="Rich Gaming Characters"
-            className="max-h-[320px] md:max-h-[460px] w-auto md:mt-10"
+            className="max-h-[320px] md:max-h-[460px] w-auto"
           />
         </div>
       </div>

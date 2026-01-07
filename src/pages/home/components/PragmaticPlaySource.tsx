@@ -138,30 +138,30 @@ export default function PragmaticPlaySource() {
 
         {/* ================= Section 2: Who is Pragmatic Play ================= */}
         <section className="max-w-5xl mx-auto text-center space-y-4 md:space-y-6">
-            <h1 className="text-xl md:text-4xl font-semibold">
-            Who are Pragmatic Play. We are.
+            <h1 className="text-2xl md:text-4xl font-bold">
+              Who are Pragmatic Play. We are.
             </h1>
 
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-            Headquartered in Gibraltar, Pragmatic Play is a leading content provider
-            delivering player-favourite games to some of the most successful operator
-            brands worldwide. Through a single, powerful API, the company offers a
-            diverse multi-product portfolio including slots, live casino, bingo,
-            virtual sports and more — available across regulated markets, languages
-            and currencies.
+              Headquartered in Gibraltar, Pragmatic Play is a leading content provider
+              delivering player-favourite games to some of the most successful operator
+              brands worldwide. Through a single, powerful API, the company offers a
+              diverse multi-product portfolio including slots, live casino, bingo,
+              virtual sports and more — available across regulated markets, languages
+              and currencies.
             </p>
 
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-            Focused on immersive experiences and responsible entertainment, Pragmatic
-            Play creates games that players return to time and time again, supported
-            by a scalable and reliable delivery framework.
+              Focused on immersive experiences and responsible entertainment, Pragmatic
+              Play creates games that players return to time and time again, supported
+              by a scalable and reliable delivery framework.
             </p>
         </section>
 
         {/* ================= Section 3: Live Casino Showcase ================= */}
         <section className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between">
-            <h2 className="text-xl md:text-4xl font-semibold mt-0 md:mt-6">
+            <h2 className="text-2xl md:text-4xl font-bold mt-0 md:mt-6">
                 Curated: Live Dealer Studio
             </h2>
         </div>
@@ -258,8 +258,8 @@ export default function PragmaticPlaySource() {
             "
         >
             {/* ===== LEFT TEXT ===== */}
-            <div className="w-full md:w-[32%] text-white text-center space-y-4 md:space-y-6">
-                <h2 className="text-xl md:text-4xl font-bold">Pragmatic Play's Technology & Platform Architecture</h2>
+            <div className="w-full md:w-[32%] text-white text-center space-y-4 md:space-y-6 mt-10 md:mt-4">
+                <h2 className="text-2xl md:text-4xl font-bold">Pragmatic Play's Technology & Platform Architecture</h2>
 
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                 The back-end platform delivers market-leading control and visibility through a single, centralised system. 
@@ -289,7 +289,7 @@ export default function PragmaticPlaySource() {
 
         {/* ================= Section 6: Responsible Gaming ================= */}
         <section className="relative py-6 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 md:px-0 grid gap-10 md:gap-12 md:grid-cols-2 items-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-0 grid gap-10 md:gap-12 md:grid-cols-2 items-center mb-20">
 
             {/* ===== LEFT: LOGO GRID ===== */}
             <div className="grid grid-cols-2 gap-4 md:gap-6">
@@ -330,7 +330,7 @@ export default function PragmaticPlaySource() {
 
             {/* ===== RIGHT: TEXT CONTENT ===== */}
             <div className="space-y-4 md:space-y-6 text-center md:text-left">
-            <h2 className="text-xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
                 Responsible Gaming & Regulatory Bodies
             </h2>
 
