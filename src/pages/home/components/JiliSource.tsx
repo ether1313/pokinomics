@@ -223,7 +223,7 @@ function JiliSlideshow() {
   ];
 
   return (
-    <section className="relative w-screen left-1/2 right-1/2 -mx-[50vw] mb-12">
+    <section className="relative w-screen left-1/2 right-1/2 -mx-[50vw] mb-12 mt-[75px] md:mt-16">
       <Splide
         options={{
           type: 'loop',

@@ -420,7 +420,7 @@ export default function CasinoReviewSectionPayout() {
                     rounded-full
                   "
                 >
-                  Play Now at【{casino.name}】
+                  Play Now at {casino.name}
                 </button>
               </div>
 

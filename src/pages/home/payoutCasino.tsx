@@ -1,5 +1,4 @@
 import React from "react";
-import ScrollProgressBar from "../../components/feature/ScrollProgressBar";
 import Header from "./components/Header";
 import BreadcrumbPayout from "./components/BreadcrumbPayout";
 import BlogTitlePayout from "./components/BlogTitlePayout";
@@ -14,7 +13,6 @@ import Footer from "./components/Footer";
 export default function PayoutCasino() {
   return (
     <div className="min-h-screen bg-white">
-      <ScrollProgressBar />
       <Header />
       <BreadcrumbPayout />
 

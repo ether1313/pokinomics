@@ -17,7 +17,7 @@ export default function BreadcrumbCrypto() {
   };
 
   return (
-    <div className="bg-gray-100 border-b border-gray-300">
+    <div className="bg-gray-100 border-b border-gray-300 mt-[75px] md:mt-16">
       <div className="max-w-7xl mx-auto">
         <div className="overflow-x-auto scrollbar-hide">
           <div className="flex items-center space-x-1 px-4 py-3 min-w-max">

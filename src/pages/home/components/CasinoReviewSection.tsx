@@ -415,7 +415,7 @@ export default function CasinoReviewSection() {
                     rounded-full
                   "
                 >
-                  Play Now at【{casino.name}】
+                  Play Now at {casino.name}
                 </button>
               </div>
 

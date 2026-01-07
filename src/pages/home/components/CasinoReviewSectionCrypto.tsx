@@ -423,7 +423,7 @@ export default function CasinoReviewSectionCrypto() {
                     rounded-full
                   "
                 >
-                  Play Now at【{casino.name}】
+                  Play Now at {casino.name}
                 </button>
               </div>
 
