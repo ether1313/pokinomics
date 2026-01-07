@@ -18,7 +18,7 @@ export default function CryptoCasino() {
       <Header />
       <BreadcrumbCrypto />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8 mt-4 md:mt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8 mt-2 md:mt-4">
         <BlogTitleCrypto />
 
         <div className="py-4 md:py-8 px-2">

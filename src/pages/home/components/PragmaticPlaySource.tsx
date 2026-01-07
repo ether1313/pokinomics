@@ -128,7 +128,7 @@ export default function PragmaticPlaySource() {
     <section className="space-y-10 px-4 md:px-0">
 
         {/* ================= Section 1: Logo Hero ================= */}
-        <section className="pt-16 flex justify-center">
+        <section className="pt-12 flex justify-center">
             <img
             src="/pragmaticPlay/pragmaticplay-logo.png"
             alt="Pragmatic Play"

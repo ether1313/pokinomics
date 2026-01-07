@@ -42,7 +42,7 @@ export default function ProviderGuide() {
 
 
   return (
-    <section className="w-screen relative left-1/2 right-1/2 -mx-[50vw] mt-10 md:mt-4">
+    <section className="w-screen relative left-1/2 right-1/2 -mx-[50vw]">
       {/* ================= HERO（全宽） ================= */}
       <header
         className="
@@ -50,7 +50,6 @@ export default function ProviderGuide() {
           w-full
           min-h-[30vh] md:min-h-screen
           flex items-center justify-center
-          pt-16 md:pt-20
           overflow-hidden
         "
         style={{

@@ -228,9 +228,9 @@ export default function BngSource() {
     )}
 
     {!showIntro && (
-    <section className="space-y-4 md:space-y-10 py-2 md:py-4">
+    <section className="space-y-4 md:space-y-10">
       {/* ================= HERO FULL WIDTH ================= */}
-      <section className="w-screen relative left-1/2 right-1/2 -mx-[50vw] mt-8 md:mt-0">
+      <section className="w-screen relative left-1/2 right-1/2 -mx-[50vw]">
         <div
           className="
             relative
@@ -263,7 +263,7 @@ export default function BngSource() {
         <div
           className="
             max-w-6xl mx-auto
-            px-8 md:px-0
+            px-4 md:px-0
             mt-6 md:mt-10
             mb-10 md:mb-16
             text-center

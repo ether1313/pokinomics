@@ -66,7 +66,7 @@ export default function PlaytechSource() {
         {/* ================= SECTION 1 : HERO ================= */}
         <section
             className="
-                relative w-full min-h-[70vh] md:min-h-screen
+                relative w-full min-h-[60vh] md:min-h-screen
                 overflow-hidden
                 bg-[url('/playtech/home-bg_final.svg')]
                 bg-cover bg-center
@@ -81,7 +81,7 @@ export default function PlaytechSource() {
                 px-6 md:px-8
                 h-full
                 flex items-center
-                mt-52 md:mt-60
+                mt-36 md:mt-48
                 "
             >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center w-full">

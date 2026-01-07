@@ -10,7 +10,7 @@ export default function LiveDealerHeader() {
     'after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#b7b7b73f] after:rounded-full';
 
   return (
-    <header className="fixed top-0 left-0 w-full z-[9999] bg-[#0d1226] border-b-2 border-b-[#5a5a5a48]">
+    <header className="top-0 left-0 w-full z-[9999] bg-[#0d1226] border-b-2 border-b-[#5a5a5a48]">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between overflow-visible">
         {/* Logo */}
         <Link to="/" className="flex items-center cursor-pointer">

@@ -45,7 +45,7 @@ const liveDealerProviders: Provider[] = [
 
 export default function LiveDealerSource() {
   return (
-    <section className=" px-4 md:px-0 mt-20">
+    <section className=" px-4 md:px-0 mt-10">
       {/* ===== Title ===== */}
       <h1 className="text-2xl md:text-4xl font-bold text-center mb-6">
         eWallet Live Dealer Providers

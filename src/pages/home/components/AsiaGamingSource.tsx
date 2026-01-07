@@ -3,7 +3,7 @@ export default function AsiaGamingSource() {
     <section className="space-y-12 md:space-y-16">
 
       {/* ===== LOGO & ABOUT ===== */}
-      <div className="text-center space-y-8 mt-24 md:mt-20">
+      <div className="text-center space-y-8 mt-14 md:mt-20">
         <img
           src="/asiaGaming/asia-gaming-logo.png"
           alt="Asia Gaming"

@@ -223,7 +223,7 @@ function JiliSlideshow() {
   ];
 
   return (
-    <section className="relative w-screen left-1/2 right-1/2 -mx-[50vw] mb-12 mt-12 md:mt-4">
+    <section className="relative w-screen left-1/2 right-1/2 -mx-[50vw] mb-12">
       <Splide
         options={{
           type: 'loop',
@@ -259,7 +259,7 @@ function JiliHero() {
       <h1 className="text-2xl md:text-4xl px-4 md:px-0 py-2 md:py-0 font-bold text-black">
         JILI eWallet Casino Pokies Australia
       </h1>
-      <p className="max-w-6xl mx-auto text-sm md:text-base text-gray-900 leading-relaxed px-4 md:px-0 mb-10 md:mb-16 mt-2 md:mt-6">
+      <p className="max-w-6xl mx-auto text-sm md:text-base text-gray-900 leading-relaxed px-2 md:px-0 mb-10 md:mb-16 mt-2 md:mt-6">
         JILI Games is an experienced online casino games provider delivering a large collection of
         HTML5 slot and casino games. With certified game systems, support for multiple currencies
         and languages, and fast platform integration, JILI focuses on innovation, stability, and
@@ -325,7 +325,7 @@ function JiliDemoPlay() {
   ];
 
   return (
-    <section className="px-4 md:px-0 mb-16 md:mb-20">
+    <section className="px-2 md:px-0 mb-16 md:mb-20">
       <h2 className="text-xl md:text-3xl font-bold text-black mb-2">
         JILI Games Demo: Try Your Luck
       </h2>
@@ -387,7 +387,7 @@ function JiliDemoPlay() {
 /* ABOUT JILI (LEFT / RIGHT) */
 function JiliAbout() {
   return (
-    <section className="grid md:grid-cols-2 gap-12 mb-12 md:mb-20 px-4 md:px-0 items-center">
+    <section className="grid md:grid-cols-2 gap-12 mb-12 md:mb-20 px-2 md:px-0 items-center">
       <img
         src="/other/jili/about-jili-01.png"
         alt="About JILI Games"
@@ -505,7 +505,7 @@ export function JiliGameGallery() {
     : images.slice(0, INITIAL_COUNT);
 
   return (
-    <section className="px-4 md:px-0 mt-12 md:mt-20 mb-12 md:mb-10">
+    <section className="px-2 md:px-0 mt-12 md:mt-20 mb-12 md:mb-10">
       {/* ===== Title ===== */}
       <h2 className="text-2xl md:text-4xl font-bold text-black text-center mb-3">
         JILI Slot Game Collection

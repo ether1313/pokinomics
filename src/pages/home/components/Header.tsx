@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <>
       {/* ================= Header ================= */}
-      <header className="fixed top-0 left-0 w-full z-[9999] bg-[#0d1226] border-b-2 border-b-[#5a5a5a48]">
+      <header className="fixed top-0 left-0 w-full z-[9999] bg-[#0d1226] border-b-4 border-b-[#1f1f1f48]">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between overflow-visible">
           {/* Logo */}
           <Link to="/" className="flex items-center cursor-pointer">
@@ -306,6 +306,9 @@ export default function Header() {
           </nav>
         )}
       </header>
+
+      {/* ================= 自动占位，避免内容被遮住 ================= */}
+      <div className="h-18 md:h-16 w-full"></div>
 
       {/* ================= Backdrop (Click anywhere to close) ================= */}
       {isMenuOpen && (
